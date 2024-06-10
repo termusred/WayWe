@@ -1,3 +1,7 @@
+"use client"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 export default function Newsletter() {
   return (
     <section>
@@ -28,13 +32,11 @@ export default function Newsletter() {
             </div>
 
             {/* CTA form */}
-            <form className="w-full lg:w-1/2">
+            <form className="w-full lg:w-1/2" onSubmit={(e) => {e.preventDefault() ,toast.success("Email ulandi")}}>
               <div className="flex flex-col sm:flex-row justify-center max-w-xs mx-auto sm:max-w-md lg:max-w-none">
-                <input type="email" className="w-full appearance-none bg-purple-700 border border-purple-500 focus:border-purple-300 rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-white placeholder-purple-400" placeholder="Emailingizni kiriting" aria-label="Emailingizni kiriting" />
-                <a className="btn text-purple-600 bg-purple-100 hover:bg-white shadow" href="#0">Obuna bo'lish</a>
+                <input type="email" className="w-full appearance-none bg-purple-700 border border-purple-500 focus:border-purple-300 rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-white placeholder-purple-400" placeholder="Emailingizni kiriting" aria-label="Emailingizni kiriting" required/>
+                <button className="btn text-purple-600 bg-purple-100 hover:bg-white shadow" type='submit'>Obuna bo'lish</button>
               </div>
-              {/* Success message */}
-              {/* <p className="text-center lg:text-left lg:absolute mt-2 opacity-75 text-sm">Thanks for subscribing!</p> */}
             </form>
 
           </div>
@@ -42,6 +44,7 @@ export default function Newsletter() {
         </div>
 
       </div>
+      <ToastContainer />
     </section>
   )
 }

@@ -57,7 +57,7 @@ export default function Features() {
                   <path className="stroke-current text-purple-300" d="M22 30h4v12h-4z" />
                 </g>
               </svg>
-              <h4 className="h4 mb-2">Dunyoga kompaniyalar</h4>
+              <h4 className="h4 mb-2">Dunyo kompaniyalari</h4>
               <p className="text-lg text-gray-400 text-center">Amazon , ebay , git , x , telegram va shu kabi kompaniyalar sizning proektingizga baho beradi va ishlashga taklif etadi</p>
             </div>
             <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-delay="500" data-aos-anchor="[data-aos-id-blocks]">
