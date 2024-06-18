@@ -20,3 +20,14 @@
 [x-cloak=""] {
     display: none;
 }
+.Moving{
+    animation: moving 1s linear infinite;
+}
+@keyframes moving {
+    0% {
+        rotate: -90deg;
+    }
+    100% {
+        rotate: 90deg;
+    }
+}
