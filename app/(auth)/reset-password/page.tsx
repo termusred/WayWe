@@ -13,8 +13,8 @@ export default function ResetPassword() {
 
           {/* Page header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-            <h1 className="h1 mb-4">Forgot your password?</h1>
-            <p className="text-xl text-gray-400">We'll email you instructions on how to reset it.</p>
+            <h1 className="h1 mb-4">Parol esdam chiqdimi?</h1>
+            <p className="text-xl text-gray-400">Parol yangilanishi uchun email xat jonatamiz.</p>
           </div>
 
           {/* Form */}
@@ -28,12 +28,12 @@ export default function ResetPassword() {
               </div>
               <div className="flex flex-wrap -mx-3 mt-6">
                 <div className="w-full px-3">
-                  <button className="btn text-white bg-purple-600 hover:bg-purple-700 w-full">Reset Password</button>
+                  <button className="btn text-white bg-purple-600 hover:bg-purple-700 w-full">Parolni yangilash</button>
                 </div>
               </div>
             </form>
             <div className="text-gray-400 text-center mt-6">
-              <Link href="/signin" className="text-purple-600 hover:text-gray-200 transition duration-150 ease-in-out">Cancel</Link>
+              <Link href="/signin" className="text-purple-600 hover:text-gray-200 transition duration-150 ease-in-out">Bekor qilish</Link>
             </div>
           </div>
 

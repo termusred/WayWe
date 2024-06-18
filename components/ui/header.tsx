@@ -38,14 +38,19 @@ export default function Header() {
                 </>
               ) : null}
               {CookieCon ? (
-                <>
+                <div className='flex gap-14'>
                   <a href='/projects' className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out">
                     Proektlar
                   </a>            
-                  <a href='/user' className="btn-sm text-white bg-purple-600 hover:bg-purple-700 ml-3">
-                    Shaxsiy Kabinet
+                  <a href='/jobs'className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out">
+                    Ish qidirish
                   </a>
-                </>
+                  <div>
+                    <a href='/user' className="btn-sm text-white bg-purple-600 hover:bg-purple-700 ml-3">
+                      Shaxsiy Kabinet
+                    </a>
+                  </div>
+                </div>
               ) : null}
             </div>
           </nav>
