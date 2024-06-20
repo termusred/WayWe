@@ -5,7 +5,7 @@ import { Loader } from "react-feather";
 
 export default function SeekFor() {
     const [isLoading, setIsLoading] = useState(false);
-    const [def , setdef] = useState([{name:"gyat" , oylik:100000},{name:"ish" , oylik:9000},{name:"ish" , oylik:2000},{name:"ish" , oylik:3000}])
+    const [def , setdef] = useState([{name:"ishmas" , oylik:100000},{name:"ish" , oylik:9000},{name:"ish" , oylik:2000},{name:"ish" , oylik:3000}])
     const [after , setAfter] = useState(def)
     
     function handleSearch(e) {
@@ -14,6 +14,7 @@ export default function SeekFor() {
             if(el.name.includes(e.target[0].value)){
                 setAfter([el])
             } else{
+                console.log("ne rabotaet");
                 setAfter(def)
             }
         })

@@ -3,10 +3,6 @@ import { setItem , getItem } from "@/utils/storage"
 import React, { useEffect, useState } from 'react';
 import { toast , ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css'; 
-<<<<<<< HEAD
-=======
-import AOS from 'aos';
->>>>>>> 69ab13b3013fd435c62bdbdd38a2552a59e9fae1
 
 export default function Projects() {
     const [Cards, setCards] = useState([]);
@@ -41,11 +37,8 @@ export default function Projects() {
                     <h3 className='bg-gray-800 flex justify-center items-center flex-wrap p-8 w-96'>{el.name}</h3>
                     <h5>{el.desc}</h5>
                     <div className=' flex flex-col gap-4'>
-<<<<<<< HEAD
                         <button className='bg-black p-2 h-10' onClick={() => toast.error("Iltimos keyinroq kirib koring")}>Loyihani Ochish</button>
-=======
                         <button className='bg-black p-2 h-10' onClick={() => {toast.error("Sayt hozirda foydalanuvchilar fayllarini saqlamayapdi")}}>Loyihani Ochish</button>
->>>>>>> 69ab13b3013fd435c62bdbdd38a2552a59e9fae1
                         <button className='bg-red-800 p-2 h-10' onClick={() => handleClear(index)}>Delete</button>
                     </div>
                 </div>
@@ -63,11 +56,8 @@ export default function Projects() {
                         </div>
                         <div className=' flex-col flex'>
                             <label htmlFor="name">Loyiha fayllari</label>
-<<<<<<< HEAD
                             <input type="file" name='name' className=' text-white'/>
-=======
                             <input type="file" name='name' className=' text-white' required/>
->>>>>>> 69ab13b3013fd435c62bdbdd38a2552a59e9fae1
                         </div>
                         <button type='submit' className=' p-2 bg-indigo-700'>Click</button>
                     </form>
