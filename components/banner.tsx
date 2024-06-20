@@ -6,9 +6,7 @@ import { useEffect, useState } from "react";
 export default function Banner() {
   // State to control the visibility of the banner
   const [showBanner, setShowBanner] = useState(true);
-  // Effect to run once on component mount
   useEffect(() => {
-    // Check if the user has accepted cookies
     const hasAcceptedCookies = getCookie('acceptedCookies') === null;
 
     // If the user hasn't accepted cookies, show the banner
