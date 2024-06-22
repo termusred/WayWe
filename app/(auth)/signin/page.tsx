@@ -4,20 +4,22 @@
 import Link from "next/link"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import {setCookie} from '@/utils/cookies';
+import { getItem } from "@/utils/storage";
+import { setCookie } from "@/utils/cookies";
 
 export default function SignIn() {
-
-  const DataBase = [{
-    name:"r@e",
-    password:"d"
-  }]
   const handleSubmit = (e: any) => {
+    const db = getItem("DataBase")
     e.preventDefault();
-    DataBase.map((el)=>{
-      if (el.name == e.target[0].value && el.password == e.target[1].value) {
+    db.map((el)=>{
+      if (el.email == e.target[0].value && el.pass == e.target[1].value) {
         toast.success('Signed in successfully!');
-        setCookie("Logged", true, 1);
+
+        if(e.target[2].value == "on"){
+          setCookie("Logged", true, 10);
+        } else {
+          setCookie("Logged", true, 1);
+        }
         window.location.href = '/';
       } else {
         toast.error('Please enter valid password & email');
@@ -106,7 +108,7 @@ export default function SignIn() {
                 <div className="w-full px-3">
                   <div className="flex justify-between">
                     <label className="flex items-center">
-                      <input type="checkbox" className="form-checkbox" />
+                      <input type="checkbox" className="form-checkbox"/>
                       <span className="text-gray-400 ml-2">
                         10 kunga saqlamoq
                       </span>

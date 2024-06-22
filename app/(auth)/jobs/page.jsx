@@ -6,16 +6,19 @@ import { Loader } from "react-feather";
 export default function SeekFor() {
     const [isLoading, setIsLoading] = useState(false);
     const [def , setdef] = useState([{name:"ishmas" , oylik:100000},{name:"ish" , oylik:9000},{name:"ish" , oylik:2000},{name:"ish" , oylik:3000}])
-    const [after , setAfter] = useState(def)
-    
+    const [after , setAfter] = useState([])
+    const [check , setCheck] = useState(false)
+
     function handleSearch(e) {
         e.preventDefault()
+        // setAfter([])
         def.map((el)=> {
             if(el.name.includes(e.target[0].value)){
-                setAfter([el])
-            } else{
+                after.push(el)
+                setCheck(true)
+            } else if(!check){
                 console.log("ne rabotaet");
-                setAfter(def)
+                setAfter([])
             }
         })
         setIsLoading(true);
