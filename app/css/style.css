@@ -29,3 +29,7 @@
     animation: spin 1s linear infinite;
   }
   
+  ::-webkit-scrollbar{
+    width: 1px;
+    background: rgb(150, 3, 255);
+  }
