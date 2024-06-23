@@ -7,7 +7,7 @@ import 'aos/dist/aos.css'
 
 import PageIllustration from '@/components/page-illustration'
 import Footer from '@/components/ui/footer'
-import {getItem , setItem} from "@/utils/storage"
+import {setItem} from "@/utils/storage"
 export default function DefaultLayout({
   children,
 }: {

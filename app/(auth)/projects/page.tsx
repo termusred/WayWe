@@ -38,7 +38,6 @@ export default function Projects() {
                     <h5>{el.desc}</h5>
                     <div className=' flex flex-col gap-4'>
                         <button className='bg-black p-2 h-10' onClick={() => toast.error("Iltimos keyinroq kirib koring")}>Loyihani Ochish</button>
-                        <button className='bg-black p-2 h-10' onClick={() => {toast.error("Sayt hozirda foydalanuvchilar fayllarini saqlamayapdi")}}>Loyihani Ochish</button>
                         <button className='bg-red-800 p-2 h-10' onClick={() => handleClear(index)}>Delete</button>
                     </div>
                 </div>

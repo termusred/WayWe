@@ -1,31 +1,27 @@
 "use client"
 import { useState } from "react";
 import { Loader } from "react-feather";
+import { toast , ToastContainer} from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+import {def} from "@/utils/db"
 
 export default function SeekFor() {
   const [isLoading, setIsLoading] = useState(false);
-  const def = [
-    { name: "front-end devoleper kerak! Biz AquaPure kompaniyasi vakillarimiz va 1-2 yillik bilimga ega xodim qidirayapmiz. AquaPure Toshkent Yakkasaroy Askiya 25 kochasida joylashgan", oylik: '5,000,000' },
-    { name: "front-end devoleper stajer kerak! Acadio o'z darslariga front-end stajer qidirmoqda! Siz ish opit olasiz va bu uchun oylik olasiz", oylik: "4,000,000" },
-    { name: "AvtoShop oz web kamandasiga 1-5 yill tajribali teamleadni qidirmoqda!", oylik: "8,000,000"},
-    { name: "Circle - full stack razrabotchik lovozimini taklif etadi. Biz websitimizdagi no sozliklarni tuzatish uchun 2-3 yillik tajribali odam qidirmoqda. Bizning ofis Salamativna kochasida joylashgan", oylik: "10,000,000" },
-    { name: "Ravel tur agentligi uchun back-end devoleper kerak . 3-5 oylik ish.", oylik: "3,000,000"},
-    { name: "Off-ice - ichimliklar kompaniyasi uchun websaytni ohirigacha tugatuvchi inson kerak", oylik: "2,000,000"}
-  ];
+  
   const [after, setAfter] = useState(def);
 
   function handleSearch(e) {
     e.preventDefault();
     const searchTerm = e.target[0].value.toLowerCase();
     const filteredResults = def.filter((el) =>
-      el.name.toLowerCase().includes(searchTerm)
+      el.desc.toLowerCase().includes(searchTerm)
     );
     setAfter(filteredResults);
 
     setIsLoading(true);
     setTimeout(() => {
       setIsLoading(false);
-    }, 1000);
+    }, 2000);
   }
 
   return (
@@ -53,19 +49,20 @@ export default function SeekFor() {
         {!isLoading &&
           after.map((el, ind) => (
             <div className="Container w-1/4 bg-gray-400 p-3" key={ind}>
-              <div className="relative h-40 bg-gray-300 mb-2"></div>
-              <h1 className="text-xl font-bold mb-2">{el.name}</h1>
+              <img className="relative h-40 mb-2" src={el.img}/>
+              <h1 className="text-xl font-bold mb-2 cursor-default">{el.desc}</h1>
               <div className="flex justify-between mb-2">
                 <div className="bg-zinc-700 h-8 p-2">
                   <h1 className="text-sm">Oylik : {el.oylik} so'm</h1>
                 </div>
-                <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md text-sm">
+                <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md text-sm" onClick={() => toast.error("work in progress")}>
                   Batafsil
                 </button>
               </div>
             </div>
           ))}
       </div>
+      <ToastContainer></ToastContainer>
     </div>
   );
 }
