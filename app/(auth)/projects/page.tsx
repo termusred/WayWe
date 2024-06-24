@@ -22,6 +22,7 @@ export default function Projects() {
 
     function HandleAdd(e : any) {
         setItem("Projects", [...Cards, { name: `${e.target[0].value}` , desc:`${e.target[1].value}` , file:`${e.target[2].value}` , id:"deafult"}]);
+        toast.success(e.target[0].value + " qoshildi")
     };
     
     const handleClear = (indexToRemove : any) => {
@@ -49,7 +50,7 @@ export default function Projects() {
                                 toast.error("Keyinroq bosib koring")
                             }
                         }}>Loyihani Ochish</button>
-                        {el.id !== "undeleteble" &&<button className='bg-red-800 p-2 h-10' onClick={() => handleClear(index)}>Delete</button>}
+                        {el.id !== "undeleteble" &&<button className='bg-red-800 p-2 h-10' onClick={() => {handleClear(index), toast.success("Proekt ochirildi")}}>Delete</button>}
                     </div>
                 </div>
             ))}
