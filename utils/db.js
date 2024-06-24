@@ -32,12 +32,12 @@ export const def = [
   {
       desc: "NextGen Tech - web dasturchi qidirmoqda. HTML, CSS, va JavaScript bo'yicha bilim talab qilinadi",
       oylik: "5,500,000",
-      img: "https://lh3.googleusercontent.com/proxy/u-k9LB9yUU3EMUov6ryHoyb02KCPDpTgI8hvh74LU-Rf4JyTMDe_OXie8YKHmjl2SnoMAa4yx9qY4e8qPUB0I6TbAGReIXFxDsV1On8sAdH8LQOfeVZydFupagUMcBrJ2w"
+      img: "https://media.licdn.com/dms/image/C4D0BAQFQTp5KScLPHg/company-logo_200_200/0/1632130746866?e=2147483647&v=beta&t=BoPGG2I7yTPttI5G1A4OVqgvZg9wUyqtH29wQ9WEB_0"
   },
   {
       desc: "Digital Sphere - full stack developer izlayapti. 3 yillik tajriba va React, Node.js bilimlari kerak",
       oylik: "11,000,000",
-      img: "https://lh3.googleusercontent.com/proxy/JLgEOa05NAkgHo1FQOOUchIZz-M1sjzHFJxYTo0YunT_4dVhdQTYTOpUyJpn9BqPGQMwA_eqo837KqseIGVEhSJzQSOnc1nIXHhnjaiW"
+      img: "https://www.spheredigitalrecruitment.com/uploads/spherewhitelogo.png"
   },
   {
       desc: "Webify - front-end developer kerak. 2 yillik tajriba va Vue.js bilimlari talab qilinadi",
