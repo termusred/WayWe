@@ -22,7 +22,7 @@ export default function User() {
         <div className=' flex h-96 flex-wrap m-7 gap-2'>
           {getItem("Projects").map((el) => {
             return(
-              <div className=' flex w-1/4 h-1/2 bg-black justify-items-center items-center p-8'>
+              <div className=' flex w-1/4 h-1/2 bg-black justify-items-center items-center p-8 hover:scale-90 transition-all duration-200'>
                 <h1>Project nomi: </h1>
                 <h1>{el.name}</h1>
               </div>

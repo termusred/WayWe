@@ -49,7 +49,7 @@ export default function SeekFor() {
       <div className="w-full flex gap-4 flex-wrap overflow-scroll p-20 overflow-x-hidden">
         {!isLoading &&
           after.map((el, ind) => (
-            <div className="Container w-1/4 bg-gray-400 p-3" key={ind}>
+            <div className="Container w-1/4 bg-gray-400 p-3 hover:scale-90 transition-all duration-150" key={ind}>
               <img className="relative h-40 mb-2" src={el.img}/>
               <h1 className="text-xl font-bold mb-2 cursor-default">{el.desc}</h1>
               <div className="flex justify-between mb-2">

@@ -50,7 +50,7 @@ export default function Projects() {
                                 toast.error("Keyinroq bosib koring")
                             }
                         }}>Loyihani Ochish</button>
-                        {el.id !== "undeleteble" &&<button className='bg-red-800 p-2 h-10' onClick={() => {handleClear(index), toast.success("Proekt ochirildi")}}>Delete</button>}
+                        {el.id !== "undeleteble" &&<button className='bg-red-800 p-2 h-10' onClick={() => {handleClear(index), toast.success("Proekt o'chirildi")}}>Delete</button>}
                     </div>
                 </div>
             ))}
@@ -69,7 +69,7 @@ export default function Projects() {
                             <label htmlFor="name">Loyiha fayllari</label>
                             <input type="file" name='name' className=' text-white'/>
                         </div>
-                        <button type='submit' className=' p-2 bg-indigo-700'>Click</button>
+                        <button type='submit' className=' p-2 bg-indigo-700'>Qoshish</button>
                     </form>
                 </div>
             )
