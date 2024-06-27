@@ -11,7 +11,7 @@ export default function SignIn() {
   const handleSubmit = (e: any) => {
     const db = getItem("DataBase")
     e.preventDefault();
-    db.map((el)=>{
+    db.map((el : any)=>{
       if (el.email == e.target[0].value && el.pass == e.target[1].value) {
         toast.success('Signed in successfully!');
 
