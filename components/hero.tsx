@@ -5,7 +5,7 @@ import ModalVideo from '@/components/modal-video'
 import { getCookie } from "@/utils/cookies"
 
 export default function Hero() {
-  const [CookieCon , setCookieCon] = useState(null);
+  const [CookieCon, setCookieCon] = useState<string | null>(null); // Explicitly typing state
 
   useEffect(() => {
     const loggedCookie = getCookie("Logged");
