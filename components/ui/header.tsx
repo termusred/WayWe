@@ -5,7 +5,7 @@ import MobileMenu from './mobile-menu';
 import { useState, useEffect } from 'react';
 
 export default function Header() {
-  const [CookieCon , setCookieCon] = useState(null);
+  const [CookieCon, setCookieCon] = useState<string | null>(null); // Explicitly typed state
 
   useEffect(() => {
     const loggedCookie = getCookie("Logged");
@@ -13,6 +13,7 @@ export default function Header() {
       setCookieCon(loggedCookie);
     }
   }, []);
+  
 
   return (
     <header className="absolute w-full z-30">
