@@ -4,8 +4,8 @@ import VideoThumb from '@/public/images/hero-image-01.jpg'
 import ModalVideo from '@/components/modal-video'
 import { getCookie } from "@/utils/cookies"
 
-export default function Hero() {
-  const [CookieCon, setCookieCon] = useState<string | null>(null); // Explicitly typing state
+export default function Header() {
+  const [CookieCon, setCookieCon] = useState<string | null>(null); // Explicitly typed state
 
   useEffect(() => {
     const loggedCookie = getCookie("Logged");
