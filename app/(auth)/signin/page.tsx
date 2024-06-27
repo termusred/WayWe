@@ -8,10 +8,14 @@ import { getItem } from "@/utils/storage";
 import { setCookie } from "@/utils/cookies";
 
 export default function SignIn() {
+  interface User {
+  email: string;
+  pass: string;
+}
   const handleSubmit = (e: any) => {
     const db = getItem("DataBase")
     e.preventDefault();
-    db.map((el : any)=>{
+    db.map((el : User)=>{
       if (el.email == e.target[0].value && el.pass == e.target[1].value) {
         toast.success('Signed in successfully!');
 
