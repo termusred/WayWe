@@ -1,4 +1,3 @@
-/** @format */
 'use client';
 import { getItem } from '@/utils/storage';
 import Avatar from 'react-avatar';
@@ -24,12 +23,13 @@ export default function User() {
       </div>
       <h2 className='ml-12 text-2xl text-white mt-10'>Foydalanuvchi loyihalari</h2>
       <div className='flex h-96 flex-wrap m-7 gap-4 overflow-y-auto'>
-        {getItem("Projects").map((el : any, index : any) => (
+        {getItem("Projects") !== null ? getItem("Projects").map((el : any, index : any) => (
           <div key={index} className='flex flex-col w-1/4 h-48 bg-gray-700 text-white justify-center items-center p-6 rounded-lg shadow-md hover:scale-95 transition-all duration-200'>
             <h1 className='text-lg font-bold'>Project nomi:</h1>
             <h1 className='text-lg'>{el.name}</h1>
           </div>
-        ))}
+        )): console.log("mayli")
+        }
       </div>
     </div>
   );
