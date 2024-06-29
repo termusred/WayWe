@@ -19,7 +19,7 @@ export default function Banner() {
     setShowBanner(false);
   };
   return (
-    <div className={`bg-gray-800 text-white p-4 fixed bottom-0 left-0 w-full ${showBanner ? '' : 'hidden'}`}>
+    <div className={`bg-gray-800 text-white p-4 fixed bottom-0 left-0 w-full h-96 ${showBanner ? '' : 'hidden'}`}>
       <p className="text-center">We use cookies to improve your experience. Click 'Accept' to continue.</p>
       <button className="mt-2 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" onClick={acceptCookies}>Accept</button>
     </div>
